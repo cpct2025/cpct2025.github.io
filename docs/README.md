@@ -2,7 +2,7 @@
 
 ## 课程信息
 
-- 上课时间：**每周一 15:55-17:30** 和 **每周五 15:55-17:30**
+- 上课时间：**每周一 14:00-15:35** 和 **每周五 14:00-15:35**
 - 教室：**3A212**
 - 讲师：[**李卫海**](mailto:whli@ustc.edu.cn)
 - 助教：[**罗嘉宏**](mailto:luojh@mail.ustc.edu.cn) [**郭彦禛**](mailto:yzhguo@mail.ustc.edu.cn) [**崔卓**](mailto:cuizhuo@mail.ustc.edu.cn)

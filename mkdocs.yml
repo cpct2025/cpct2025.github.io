@@ -1,6 +1,6 @@
 site_name: USTC CPCT 2025 课程主页
 repo_name: cpct2025/cpct2025.github.io
-repo_url: https://github.com/cpct2025/cpct2025.github.io
+repo_url: https://cpct2025.github.io
 theme:
   name: material
   language: zh

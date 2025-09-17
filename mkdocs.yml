@@ -4,3 +4,46 @@ repo_url: https://github.com/cpct2025/cpct2025.github.io
 theme:
   name: material
   language: zh
+  features:
+    - navigation.tabs
+    - navigation.top
+    - toc.integrate
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+    - header.autohide
+    - search.suggest
+    - search.highlight
+    - search.share
+    - navigation.sections
+    - navigation.expand
+    - navigation.instant
+    - navigation.tracking
+    - navigation.indexes
+    - footer.social
+    - footer.icons
+    - footer.navigation
+    - palette.toggle
+    - palette.icons
+    - announcement.bar
+    - color-mode
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到夜间模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: 切换到日间模式
+  icon:
+    repo: fontawesome/brands/github
+nav:
+  - 首页: README.md
+  - FAQ: faq/FAQ.md

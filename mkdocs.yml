@@ -24,8 +24,6 @@ theme:
     logo: fontawesome/brands/linux
     repo: octicons/mark-github-16
   features:
-    - content.action.edit
-    - content.action.view
     - content.code.copy
     - content.tooltips
     - navigation.footer
@@ -57,6 +55,7 @@ markdown_extensions:
 nav:
   - 首页: README.md
   - lab0: 
-    - markdown教程: lab0/markdown.md
-    - IDE安装教程: lab0/ide_installation.md
+    - Markdown 教程: lab0/markdown.md
+    - Git 教程: lab0/git.md
+    - IDE 安装教程: lab0/ide_installation.md
   - FAQ: faq/FAQ.md

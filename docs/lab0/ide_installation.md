@@ -86,6 +86,31 @@ Visual Studio Code (VSCode) 是一款由微软开发的开源代码编辑器，�
 
     专业功能有限: 对于复杂的大型项目管理或专业的IDE特性的支持不如一些商业IDE如Eclipse或IntelliJ IDEA全面。
 
+### VSCode调试
+
+选中左侧进入debug页面
+![VSCode8](images/VSCode8.png)
+
+代码左侧点击某一行开头处，出现红点，设置完成
+![VSCode9](images/VSCode9.png)
+
+按 F5 开始调试
+程序会在断点1处停止
+
+按 F5 继续
+
+???+ question "快捷键有哪些？"
+    
+    F5 - 继续执行到下一个断点
+
+    F10 - 单步执行（不进入函数内部）
+
+    F11 - 单步执行（会进入函数内部）
+
+    Shift + F5 - 停止调试
+
+    Ctrl + Shift + F5 - 重启调试
+
 ### MinGW 安装
 
 下载MinGW

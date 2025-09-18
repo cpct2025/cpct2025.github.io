@@ -82,7 +82,7 @@ Visual Studio Code (VSCode) 是一款由微软开发的开源代码编辑器，�
 安装C/C++ for Visual Studio Code
 ![VSCode3](images/VSCode3.png)
 
-???+ vscode功能多，那有没有什么坏处呢？"
+???+ question "vscode功能多，那有没有什么坏处呢？"
 
     专业功能有限: 对于复杂的大型项目管理或专业的IDE特性的支持不如一些商业IDE如Eclipse或IntelliJ IDEA全面。
 

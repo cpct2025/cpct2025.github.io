@@ -1,4 +1,4 @@
-name: CI with CD
+name: Deploy to GH Pages
 
 on:
   push:

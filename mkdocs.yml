@@ -57,4 +57,6 @@ nav:
     - Markdown 教程: lab0/markdown.md
     - Git 教程: lab0/git.md
     - IDE 安装教程: lab0/ide_installation.md
-  - FAQ: faq/FAQ.md
+  - FAQ: 
+    - faq/FAQ.md
+    - faq1: faq/faq-1.md

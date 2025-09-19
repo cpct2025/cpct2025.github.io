@@ -28,3 +28,7 @@
 教材：《程序设计与计算思维（基于 C 语言）》 王雷 白雪飞 王蒿 谭立湘 编著 电子工业出版社
 
 网站：[Linux User Group 101](https://101.lug.ustc.edu.cn/)、[cs-self-learning](https://csdiy.wiki/)、[Linux User Group 201](https://201.ustclug.org/)
+
+## 关于镜像
+
+本站的镜像会自动每小时更新一次，更新时间请看页面底部的 Last updated 信息。

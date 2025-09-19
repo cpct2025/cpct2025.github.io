@@ -114,7 +114,7 @@ Visual Studio Code (VSCode) 是一款由微软开发的开源代码编辑器，�
 ### MinGW 安装
 
 下载MinGW
-[https://sourceforge.net/projects/mingw-w64/](https://sourceforge.net/projects/mingw-w64/)
+[https://sourceforge.net/projects/mingw-w64/](https://sourceforge.net/projects/mingw-w64/) (需要下载的文件在 [这里](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z/download)，*注意不要点击那个绿色的“下载”按钮，否则你下载的是编译器的源代码，不是编译好的编译器*)
 
 配置环境变量
 

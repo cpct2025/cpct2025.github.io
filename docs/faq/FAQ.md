@@ -5,6 +5,8 @@
 - [FAQ 1: C 语言的常量类型](faq-1.md)
 - [FAQ 2: 关于“复杂度”](faq-2.md)
 
+*欢迎各位同学积极提问或投稿FAQ！提问请通过QQ/邮箱，投稿请用PR。*
+
 ## 如何提问？
 
 可以在提问前阅读一下 Linux 用户协会编写的 [提问指南](https://lug.ustc.edu.cn/wiki/doc/howtoask/)，这篇

@@ -20,6 +20,7 @@
 #include <stdio.h>
 
 #define const1 2025
+const int const3 = 2025;
 int main(void)
 {
     // 修改 const1 是不合法的，因为这相当于 2025 = 1958;
@@ -29,13 +30,16 @@ int main(void)
     // 定义一个 const 修饰的变量。
     const int const2 = 2025;
 
-    // 给 const2 赋值是不合法的，这是因为编译器看到了它“const”的修饰。
+    // 给局部的变量 const2 (const 修饰的) 赋值是不合法的，这是因为编译器看到了它“const”的修饰。
     // error: assignment of read-only variable 'const2'
     const2 = 1958;
 
     // 但是，我们可以间接地修改 const2。
     *(int*)(&const2) = 2025; // 可以的
     printf("const2 = %d\n", const2);
+
+    *(int*)(&const3) = 1234; // 可以通过编译，但运行时可能报告段错误，因为全局的 const 变量可能存在内存中的只读数据区域，试图写入将引发异常。
+    printf("const3 = %d\n", const2);
 
     return 0;
 }

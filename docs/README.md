@@ -8,7 +8,7 @@
 - 助教：[**罗嘉宏**](mailto:luojh@mail.ustc.edu.cn) [**郭彦禛**](mailto:yzhguo@mail.ustc.edu.cn) [**崔卓**](mailto:cuizhuo@mail.ustc.edu.cn)
 - 考核方式：闭卷机考 + 闭卷笔试
 - 分数组成(暂定)：作业/实验(15%) + 机考(30%) + 大作业(15%) + 期末笔试(40%)
-- **Online Judge Website**: [**OJ 平台**](https://cscourse.ustc.edu.cn)，**DDL: 2025.11.29 晚 23:59**
+- **Online Judge Website**: [**OJ 平台**](https://cscourse.ustc.edu.cn)，**DDL: 2025.11.30 晚 23:59**
 - **大作业 DDL**: **2025.12.27 晚 23:59**
 
 ???+ question "如何提问？"

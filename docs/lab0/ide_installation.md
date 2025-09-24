@@ -18,9 +18,7 @@ JetBrains 是一家总部位于荷兰的软件开发公司，成立于 2000 年�
 
 ### Example
 
-以 Windows 11 上的安装为例：
-
-从[https://download.jetbrains.com/cpp/CLion-2025.2.1.exe](https://download.jetbrains.com/cpp/CLion-2025.2.1.exe)上下载好之后打开，遇到下图所示界面时可以根据喜好选择，也可以跟下图保持一致：
+以 Windows 11 上的安装为例：从[https://download.jetbrains.com/cpp/CLion-2025.2.1.exe](https://download.jetbrains.com/cpp/CLion-2025.2.1.exe)上下载好之后打开，遇到下图所示界面时可以根据喜好选择，也可以跟下图保持一致：
 
 ![clion1](images/clion1.png)
 
@@ -74,12 +72,15 @@ Visual Studio Code (VSCode) 是一款由微软开发的开源代码编辑器，�
 [https://code.visualstudio.com/Download](https://code.visualstudio.com/Download) 下载vscode
 
 建议选上所有内容
+
 ![VSCode1](images/VSCode1.png)
 
 安装中文语言包(根据提示重启IDE即可)
+
 ![VSCode2](images/VSCode2.png)
 
 安装C/C++ for Visual Studio Code
+
 ![VSCode3](images/VSCode3.png)
 
 ???+ question "vscode功能多，那有没有什么坏处呢？"
@@ -89,9 +90,11 @@ Visual Studio Code (VSCode) 是一款由微软开发的开源代码编辑器，�
 ### VSCode调试
 
 选中左侧进入debug页面
+
 ![VSCode8](images/VSCode8.png)
 
 代码左侧点击某一行开头处，出现红点，设置完成
+
 ![VSCode9](images/VSCode9.png)
 
 按 F5 开始调试
@@ -121,6 +124,7 @@ Visual Studio Code (VSCode) 是一款由微软开发的开源代码编辑器，�
 **配置环境变量**
 
 win+R 输入 sysdm.cpl
+
 ![VSCode4](images/VSCode4.png)
 
 ![VSCode5](images/VSCode5.png)
@@ -128,6 +132,7 @@ win+R 输入 sysdm.cpl
 ![VSCode6](images/VSCode6.png)
 
 找到你刚才解压的 MinGW 中的 `bin` 文件夹，复制绝对地址（`...\mingw64\bin`）,点击新建后左边输入之前复制的 MinGW 的地址,点击确定
+
 ![VSCode7](images/VSCode7.png)
 
 按win + R打开运行后输入cmd打开命令提示符，输入gcc --version查看是否成功

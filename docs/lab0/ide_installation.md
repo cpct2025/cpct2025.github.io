@@ -113,10 +113,12 @@ Visual Studio Code (VSCode) 是一款由微软开发的开源代码编辑器，�
 
 ### MinGW 安装
 
-下载MinGW
+**下载MinGW**
 [https://sourceforge.net/projects/mingw-w64/](https://sourceforge.net/projects/mingw-w64/) (需要下载的文件在 [这里](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z/download)，*注意不要点击那个绿色的“下载”按钮，否则你下载的是编译器的源代码，不是编译好的编译器*)
 
-配置环境变量
+> 另有一个构建，在[这里](https://github.com/niXman/mingw-builds-binaries/releases)，包含了版本新很多的 MinGW 预构建版本。
+
+**配置环境变量**
 
 win+R 输入 sysdm.cpl
 ![VSCode4](images/VSCode4.png)
@@ -125,7 +127,7 @@ win+R 输入 sysdm.cpl
 
 ![VSCode6](images/VSCode6.png)
 
-找到你刚才解压的mingw文件中的bin文件夹，复制绝对地址（...\mingw64\bin）,点击新建后左边输入之前复制的mingw的地址,点击确定
+找到你刚才解压的 MinGW 中的 `bin` 文件夹，复制绝对地址（`...\mingw64\bin`）,点击新建后左边输入之前复制的 MinGW 的地址,点击确定
 ![VSCode7](images/VSCode7.png)
 
 按win + R打开运行后输入cmd打开命令提示符，输入gcc --version查看是否成功

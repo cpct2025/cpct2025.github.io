@@ -2,8 +2,8 @@ site_name: USTC CPCT 2025 课程主页
 repo_name: cpct2025/cpct2025.github.io
 repo_url: https://github.com/cpct2025/cpct2025.github.io
 theme:
-  name: 'material'
-  language: 'zh'
+  name: "material"
+  language: "zh"
   font: false
   palette:
     - scheme: default
@@ -55,10 +55,21 @@ markdown_extensions:
 
 nav:
   - 首页: README.md
-  - lab0: 
-    - Markdown 教程: lab0/markdown.md
-    - Git 教程: lab0/git.md
-    - IDE 安装教程: lab0/ide_installation.md
+  - lab0:
+      - Markdown 教程: lab0/markdown.md
+      - Git 教程: lab0/git.md
+      - IDE 安装教程: lab0/ide_installation.md
   - Hint: hint/hint.md
   - FAQ: faq/FAQ.md
   - 勘误: errata/errata.md
+
+extra_javascript:
+  # [数学公式支持]
+  # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
+  - mkdocs/javascripts/katex.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+extra_css:
+  # [数学公式支持]
+  # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css

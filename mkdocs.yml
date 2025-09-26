@@ -30,6 +30,11 @@ theme:
     - navigation.top
     - navigation.tracking
 
+plugin:
+  - search
+  - offline
+  - privacy
+
 markdown_extensions:
   - admonition
   - attr_list

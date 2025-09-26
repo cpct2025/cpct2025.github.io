@@ -46,6 +46,8 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.inlinehilite
   - pymdownx.keys
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.superfences
   - markdown.extensions.def_list
   - toc:

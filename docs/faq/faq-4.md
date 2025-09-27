@@ -1,4 +1,4 @@
-# FAQ 4. 表达式求值
+# FAQ 4: 表达式求值
 
 > 参考资料: [2025 年 LUG C 程序设计复习课](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.01.01_C%E8%AF%AD%E8%A8%80/)
 

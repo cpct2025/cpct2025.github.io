@@ -1,5 +1,7 @@
 # CLion FAQs
 
+**最简单的方法，就是确保整个开发环境都存储在不含空格和中文字符的地方。**
+
 ## VSCode 使用 CLion 自带 gdb 的中文路径支持问题
 
 有同学可能喜欢用 VSCode **复用** CLion 的 MinGW 和 gdb，但是 gdb 调试器默认不支持中文路径，CLion 使用了自己的调试桥接层，对路径做了额外的 Unicode 处理和转义，而 VS Code 的 C/C++ 扩展（cpptools）通过 Microsoft 的调试适配器（WindowsDebugLauncher.exe） 调用 GDB；

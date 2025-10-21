@@ -8,7 +8,7 @@ C 语言中，scanf 函数读取浮点数时应遵循严格的位宽关系，%f 
 float a;
 double b;
 
-scanf("%f %lf", a, b);
+scanf("%f %lf", &a, &b);
 ```
 
 ## printf 函数

@@ -1,3 +1,8 @@
+[[tool.uv.index]]
+url = "https://mirrors.ustc.edu.cn/pypi/simple/"
+default = true
+[tool.uv.pip]
+index-url = "https://mirrors.ustc.edu.cn/pypi/simple/"
 [project]
 name = "cpct2025-github-io"
 version = "0.1.0"

@@ -64,7 +64,7 @@ nav:
       - Markdown 教程: lab0/markdown.md
       - Git 教程: lab0/git.md
       - IDE 安装教程: lab0/ide_installation.md
-      - Linux in Windows Hyper-V: lab0/Linux.md
+      - Linux in Windows Hyper-V: lab0/linux.md
   - Hint: hint/hint.md
   - FAQ: faq/FAQ.md
   - 练习题: exercise/exercise.md

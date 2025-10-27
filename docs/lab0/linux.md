@@ -407,7 +407,7 @@ cd ~
 mkdir geant4
 cd geant4/
 wget https://gitlab.cern.ch/geant4/geant4/-/archive/v11.3.2/geant4-v11.3.2.tar.gz
-tar -xvzf geant4-v11.3.2.tar.gz
+tar -xzf geant4-v11.3.2.tar.gz
 mkdir geant4-build geant4-install
 cd geant4-build/
 

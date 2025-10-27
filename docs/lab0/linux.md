@@ -411,7 +411,7 @@ tar -xzf geant4-v11.3.2.tar.gz
 mkdir geant4-build geant4-install
 cd geant4-build/
 
-cmake -DCMAKE_INSTALL_PREFIX=/home/USER_NAME/geant4/geant4-install -DGEANT4_INSTALL_DATA=ON -DGEANT4_USE_VTK=ON /home/USER_NAME/geant4/geant4
+cmake -DCMAKE_INSTALL_PREFIX=/home/USER_NAME/geant4/geant4-install -DGEANT4_INSTALL_DATA=ON -DGEANT4_USE_VTK=ON /home/USER_NAME/geant4/geant4-v11.3.2
 make -j20
 make install
 

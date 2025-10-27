@@ -296,11 +296,15 @@ Host debian
 
 #### 公钥认证登录
 
-参见 <https://101.lug.ustc.edu.cn/Ch01/supplement/#ssh>
+> 参见 <https://101.lug.ustc.edu.cn/Ch01/supplement/#ssh>
 
 #### X11 Forwarding
 
 ssh 也有图形化支持，即 X11 Forwarding，参见 <https://zhuanlan.zhihu.com/p/16034352413>
+
+### 防火墙
+
+TBD
 
 ## Applications
 
@@ -330,9 +334,11 @@ sudo apt install htop -y
 
 ### VSCode & code-server
 
+如果已经配置好了 ssh config 文件，那么可以直接在本地 VSCode 中使用 Remote - SSH 插件连接到远程主机或虚拟机，参见 <https://vlab.ustc.edu.cn/docs/tutorial/vscode2vlab/#installvs>
+
 ### uv
 
-Python 包管理器，<https://uv.doczh.com/>
+Python 包管理器，参见 <https://uv.doczh.com/>
 
 ```bash
 sudo apt install curl -y
@@ -341,8 +347,79 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 # wget -qO- https://astral.sh/uv/install.sh | sh
 ```
 
-### 编程语言配置
-
 ### Docker
 
+参见 <https://101.lug.ustc.edu.cn/Ch08/>
+
+```bash
+sudo apt install -y docker.io docker-compose
+
+sudo systemctl enable docker
+
+sudo systemctl start docker
+
+sudo usermod -aG docker USER_NAME
+
+sudo nano /etc/docker/daemon.json
+```
+
+```plain
+{
+    "registry-mirrors": [
+        "https://docker.m.daocloud.io",
+        "https://docker.imgdb.de",
+        "https://docker-0.unsee.tech",
+        "https://docker.hlmirror.com",
+        "https://docker.1ms.run",
+        "https://func.ink",
+        "https://lispy.org",
+        "https://docker.xiaogenban1993.com",
+        "https://docker.1panel.live"
+    ]
+}
+```
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
 ### Geant4
+
+> Geant4 is a free software package composed of tools which can be used to accurately simulate the passage of particles through matter.
+
+Geant4 是由欧洲核子研究组织基于 C++ 面向对象技术开发的蒙特卡罗应用软件包，用于模拟粒子在物质中输运的物理过程。由于具有良好的通用性和扩展能力，Geant4 在涉及微观粒子与物质相互作用的诸多领域获得了广泛应用。教程参见 <https://zhuanlan.zhihu.com/c_1238110686846484480>
+
+#### 在物理机/虚拟机中安装 Geant4
+
+> 参见 <https://geant4-userdoc.web.cern.ch/UsersGuides/InstallationGuide/html/index.html>
+
+```bash
+sudo apt update && sudo apt upgrade -y
+# Basic
+sudo apt install -y build-essential cmake wget
+# OpenGL
+sudo apt install -y libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev mesa-utils mesa-common-dev libglew-dev libglfw3-dev
+# VTK
+sudo apt install -y libvtk9-dev
+
+cd ~
+mkdir geant4
+cd geant4/
+wget https://gitlab.cern.ch/geant4/geant4/-/archive/v11.3.2/geant4-v11.3.2.tar.gz
+tar -xvzf geant4-v11.3.2.tar.gz
+mkdir geant4-build geant4-install
+cd geant4-build/
+
+cmake -DCMAKE_INSTALL_PREFIX=/home/USER_NAME/geant4/geant4-install -DGEANT4_INSTALL_DATA=ON -DGEANT4_USE_VTK=ON /home/USER_NAME/geant4/geant4
+make -j20
+make install
+
+cd ~/geant4/geant4-install/bin
+source geant4.sh
+echo "source /home/USER_NAME/geant4/geant4-install/bin/geant4.sh" >> ~/.bashrc
+```
+
+#### 在 Docker 中安装 Geant4
+
+TBD

@@ -1,6 +1,6 @@
 # Debian 13.1.0 on Windows 11 Hyper-V - from download to installation, config and applications
 
-!!! Warning "本文尚未完成，不是正式版本"
+!!! Warning "本文已基本完成，尚需审阅和校对"
 
 > 本文第一部分适用于 Windows 11 各种版本安装 Debian 13.1.0 虚拟机。教程只说操作，一般不讲为什么，可自行查阅资料。
 >
@@ -30,7 +30,7 @@
 
 ## Config Debian 13.1.0
 
-> 约定：`USER_NAME` 为在用户命令行 Shell 中执行 `whoami` 命令后返回的结果，即用户名。
+> 约定：`USER_NAME` 为在用户命令行 Shell 中执行 `whoami` 或 `echo $USER` 命令后返回的结果，即用户名；`HOME` 为在用户命令行 Shell 中执行 `echo $HOME` 命令后返回的结果。
 
 ???+ question "命令行 Shell 是什么？在哪里打开？"
 
@@ -347,6 +347,10 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 # wget -qO- https://astral.sh/uv/install.sh | sh
 ```
 
+### 编程语言配置
+
+参见 <https://101.lug.ustc.edu.cn/Ch07/>
+
 ### Docker
 
 参见 <https://101.lug.ustc.edu.cn/Ch08/>
@@ -390,6 +394,8 @@ sudo systemctl restart docker
 
 Geant4 是由欧洲核子研究组织基于 C++ 面向对象技术开发的蒙特卡罗应用软件包，用于模拟粒子在物质中输运的物理过程。由于具有良好的通用性和扩展能力，Geant4 在涉及微观粒子与物质相互作用的诸多领域获得了广泛应用。教程参见 <https://zhuanlan.zhihu.com/c_1238110686846484480>
 
+更详细的安装可见 <https://github.com/yzguo/geant4-install>
+
 #### 在物理机/虚拟机中安装 Geant4
 
 > 参见 <https://geant4-userdoc.web.cern.ch/UsersGuides/InstallationGuide/html/index.html>
@@ -397,33 +403,47 @@ Geant4 是由欧洲核子研究组织基于 C++ 面向对象技术开发的蒙�
 ```bash
 sudo apt update && sudo apt upgrade -y
 # Basic
-sudo apt install -y build-essential cmake wget
+sudo apt install -y build-essential cmake wget libexpat1-dev qtbase5-dev libvtk9-dev libvtk9-qt-dev
+```
+
+```bash
+sudo apt update && sudo apt upgrade -y
+# Basic
+sudo apt install -y build-essential cmake wget libexpat1-dev
 # Qt5
 sudo apt install qtcreator qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools
 # Qt5 extra
-sudo apt install libqt5charts5-dev libqt5datavisualization5-dev libqt5gamepad5-dev libqt5gstreamer-dev libqt5networkauth5-dev libqt5opengl5-dev libqt5remoteobjects5-dev libqt5scxml5-dev libqt5sensors5-dev libqt5serialbus5-dev libqt5serialport5-dev libqt5svg5-dev libqt5texttospeech5-dev libqt5virtualkeyboard5-dev libqt5waylandclient5-dev libqt5waylandcompositor5-dev libqt5webkit5-dev libqt5webchannel5-dev libqt5websockets5-dev libqt5webview5-dev libqt5x11extras5-dev libqt5xmlpatterns5-dev
+sudo apt install libqt5charts5-dev libqt5datavisualization5-dev libqt5gamepad5-dev libqt5networkauth5-dev libqt5opengl5-dev libqt5sensors5-dev libqt5serialport5-dev libqt5svg5-dev libqt5texttospeech5-dev libqt5virtualkeyboard5-dev libqt5waylandclient5-dev libqt5waylandcompositor5-dev libqt5webchannel5-dev libqt5websockets5-dev libqt5webview5-dev libqt5x11extras5-dev libqt5xmlpatterns5-dev
 # OpenGL
 sudo apt install -y libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev mesa-utils mesa-common-dev libglew-dev libglfw3-dev
 # VTK
-sudo apt install -y libvtk9-dev
+sudo apt install -y libvtk9-dev libvtk9-qt-dev
 
-cd ~
-mkdir geant4
-cd geant4/
+mkdir -p $HOME/geant4
+cd $HOME/geant4/
 wget https://gitlab.cern.ch/geant4/geant4/-/archive/v11.3.2/geant4-v11.3.2.tar.gz
 tar -xzf geant4-v11.3.2.tar.gz
 mkdir geant4-build geant4-install
 cd geant4-build/
 
-cmake -DCMAKE_INSTALL_PREFIX=/home/USER_NAME/geant4/geant4-install -DGEANT4_INSTALL_DATA=ON -DGEANT4_USE_QT=ON -DGEANT4_USE_VTK=ON /home/USER_NAME/geant4/geant4-v11.3.2
-make -j20
+cmake -DCMAKE_INSTALL_PREFIX=$HOME/geant4/geant4-install -DGEANT4_INSTALL_DATA=ON -DGEANT4_USE_QT=ON -DGEANT4_USE_VTK=ON $HOME/geant4/geant4-v11.3.2
+make -j$(nproc)
 make install
 
-cd ~/geant4/geant4-install/bin
+cd $HOME/geant4/geant4-install/bin
 source geant4.sh
-echo "source /home/USER_NAME/geant4/geant4-install/bin/geant4.sh" >> ~/.bashrc
+echo "source $HOME/geant4/geant4-install/bin/geant4.sh" >> $HOME/.bashrc
 ```
 
 #### 在 Docker 中安装 Geant4
 
-TBD
+需要有 sudo 权限或以 root 用户执行如下命令：
+
+```bash
+git clone https://github.com/yzguo/geant4-install.git
+cd geant4-v11.3.2-docker/
+make build
+make run
+```
+
+然后就可以使用用浏览器访问 127.0.0.1:8080 来使用 Geant4 了，也可以在局域网中通过将 127.0.0.1 替换为主机/虚拟机的 IP 地址来访问。

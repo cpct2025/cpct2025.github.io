@@ -403,13 +403,13 @@ Geant4 是由欧洲核子研究组织基于 C++ 面向对象技术开发的蒙�
 ```bash
 sudo apt update && sudo apt upgrade -y
 # Basic
-sudo apt install -y build-essential cmake wget libexpat1-dev qtbase5-dev libvtk9-dev libvtk9-qt-dev
+sudo apt install -y build-essential cmake wget axel libexpat1-dev qtbase5-dev libvtk9-dev libvtk9-qt-dev
 ```
 
 ```bash
 sudo apt update && sudo apt upgrade -y
 # Basic
-sudo apt install -y build-essential cmake wget libexpat1-dev
+sudo apt install -y build-essential cmake wget axel libexpat1-dev
 # Qt5
 sudo apt install qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools
 # Qt5 extra
@@ -421,7 +421,7 @@ sudo apt install -y libvtk9-dev libvtk9-qt-dev
 
 mkdir -p $HOME/geant4
 cd $HOME/geant4/
-wget https://gitlab.cern.ch/geant4/geant4/-/archive/v11.3.2/geant4-v11.3.2.tar.gz
+axel -n 32 https://gitlab.cern.ch/geant4/geant4/-/archive/v11.3.2/geant4-v11.3.2.tar.gz
 tar -xzf geant4-v11.3.2.tar.gz
 mkdir geant4-build geant4-install
 cd geant4-build/

@@ -409,11 +409,11 @@ sudo apt install -y build-essential cmake wget axel libexpat1-dev qtbase5-dev li
 ```bash
 sudo apt update && sudo apt upgrade -y
 # Basic
-sudo apt install -y build-essential cmake wget axel libexpat1-dev
+sudo apt install -y build-essential ca-certificates cmake wget axel libexpat1-dev
 # Qt5
-sudo apt install qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools
+sudo apt install qtbase5-dev
 # Qt5 extra
-sudo apt install qtcreator libqt5charts5-dev libqt5datavisualization5-dev libqt5gamepad5-dev libqt5networkauth5-dev libqt5opengl5-dev libqt5sensors5-dev libqt5serialport5-dev libqt5svg5-dev libqt5texttospeech5-dev libqt5virtualkeyboard5-dev libqt5waylandclient5-dev libqt5waylandcompositor5-dev libqt5webchannel5-dev libqt5websockets5-dev libqt5webview5-dev libqt5x11extras5-dev libqt5xmlpatterns5-dev
+sudo apt install qtchooser qt5-qmake qtbase5-dev-tools qtcreator libqt5charts5-dev libqt5datavisualization5-dev libqt5gamepad5-dev libqt5networkauth5-dev libqt5opengl5-dev libqt5sensors5-dev libqt5serialport5-dev libqt5svg5-dev libqt5texttospeech5-dev libqt5virtualkeyboard5-dev libqt5waylandclient5-dev libqt5waylandcompositor5-dev libqt5webchannel5-dev libqt5websockets5-dev libqt5webview5-dev libqt5x11extras5-dev libqt5xmlpatterns5-dev
 # OpenGL
 sudo apt install -y libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev mesa-utils mesa-common-dev libglew-dev libglfw3-dev
 # VTK

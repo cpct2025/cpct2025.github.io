@@ -304,7 +304,9 @@ ssh 也有图形化支持，即 X11 Forwarding，参见 <https://zhuanlan.zhihu.
 
 ### 防火墙
 
-TBD
+#### ufw
+
+#### iptables
 
 ## Applications
 

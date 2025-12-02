@@ -13,7 +13,7 @@ scanf("%f %lf", &a, &b);
 
 ## printf 函数
 
-C 语言的 float 类型在运算时往往会被隐式提升为 double 类型变量，printf 函数中的 %f 也是如此，因此在打印浮点数类型（long double 除外）时，统一使用 %f：
+C 语言的 float 类型在运算时往往会被隐式提升为 double 类型变量，printf 函数中的 %f 也是如此，因此在打印浮点数类型（long double 除外，应使用 %Lf）时，统一使用 %f：
 
 ```c
 float a = 114.514;
